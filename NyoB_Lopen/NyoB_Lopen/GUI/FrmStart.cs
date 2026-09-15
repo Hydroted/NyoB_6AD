@@ -16,5 +16,11 @@ namespace NyoB_Lopen
         {
             InitializeComponent();
         }
+
+        private void btnAfs_Click(object sender, EventArgs e)
+        {
+            //Afsluiten
+            Close();
+        }
     }
 }
