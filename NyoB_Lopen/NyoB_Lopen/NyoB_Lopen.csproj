@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Deelnemer.cs" />
+    <Compile Include="FrmOpz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpz.Designer.cs">
+      <DependentUpon>FrmOpz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmBew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmBew.Designer.cs">
+      <DependentUpon>FrmBew.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmIns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +73,12 @@
     </Compile>
     <Compile Include="Business\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmOpz.resx">
+      <DependentUpon>FrmOpz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmBew.resx">
+      <DependentUpon>FrmBew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmIns.resx">
       <DependentUpon>FrmIns.cs</DependentUpon>
     </EmbeddedResource>
