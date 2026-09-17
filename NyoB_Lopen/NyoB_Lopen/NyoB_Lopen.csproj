@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Deelnemer.cs" />
-    <Compile Include="FrmOpz.cs">
+    <Compile Include="GUI\FrmOpz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOpz.Designer.cs">
+    <Compile Include="GUI\FrmOpz.Designer.cs">
       <DependentUpon>FrmOpz.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmBew.cs">
@@ -73,7 +73,7 @@
     </Compile>
     <Compile Include="Business\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmOpz.resx">
+    <EmbeddedResource Include="GUI\FrmOpz.resx">
       <DependentUpon>FrmOpz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmBew.resx">
