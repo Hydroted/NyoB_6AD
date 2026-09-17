@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Deelnemer.cs" />
-    <Compile Include="FrmIns.cs">
+    <Compile Include="GUI\FrmIns.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmIns.Designer.cs">
+    <Compile Include="GUI\FrmIns.Designer.cs">
       <DependentUpon>FrmIns.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmStart.cs">
@@ -61,7 +61,7 @@
     </Compile>
     <Compile Include="Business\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmIns.resx">
+    <EmbeddedResource Include="GUI\FrmIns.resx">
       <DependentUpon>FrmIns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmStart.resx">
