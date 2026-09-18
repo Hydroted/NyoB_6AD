@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 583);
+            this.ClientSize = new System.Drawing.Size(553, 583);
             this.ControlBox = false;
             this.Controls.Add(this.btnVerw);
             this.Controls.Add(this.cmbKies);

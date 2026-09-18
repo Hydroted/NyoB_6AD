@@ -42,6 +42,7 @@
             this.btnIns.TabIndex = 0;
             this.btnIns.Text = "Inschrijven";
             this.btnIns.UseVisualStyleBackColor = true;
+            this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
             // 
             // btnOpz
             // 
@@ -51,6 +52,7 @@
             this.btnOpz.TabIndex = 1;
             this.btnOpz.Text = "Opzoeken";
             this.btnOpz.UseVisualStyleBackColor = true;
+            this.btnOpz.Click += new System.EventHandler(this.btnOpz_Click);
             // 
             // btnAfs
             // 
@@ -70,6 +72,7 @@
             this.btnBew.TabIndex = 3;
             this.btnBew.Text = "Bewerken";
             this.btnBew.UseVisualStyleBackColor = true;
+            this.btnBew.Click += new System.EventHandler(this.btnBew_Click);
             // 
             // FrmStart
             // 
@@ -82,7 +85,7 @@
             this.Controls.Add(this.btnOpz);
             this.Controls.Add(this.btnIns);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Startmenu: ";
