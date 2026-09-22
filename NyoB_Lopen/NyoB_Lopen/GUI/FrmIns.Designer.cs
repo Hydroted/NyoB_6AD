@@ -99,6 +99,7 @@
             this.btnIns.TabIndex = 5;
             this.btnIns.Text = "Inschrijven";
             this.btnIns.UseVisualStyleBackColor = true;
+            this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
             // 
             // btnAn
             // 
@@ -143,10 +144,11 @@
             this.Controls.Add(this.lblAfst);
             this.Controls.Add(this.lblNaam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmIns";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inschrijven";
+            this.Load += new System.EventHandler(this.FrmIns_Load);
             this.grbBetaald.ResumeLayout(false);
             this.grbBetaald.PerformLayout();
             this.ResumeLayout(false);

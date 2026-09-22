@@ -152,6 +152,7 @@
             this.cmbKies.Name = "cmbKies";
             this.cmbKies.Size = new System.Drawing.Size(208, 40);
             this.cmbKies.TabIndex = 17;
+            this.cmbKies.SelectedIndexChanged += new System.EventHandler(this.cmbKies_SelectedIndexChanged);
             // 
             // btnVerw
             // 
@@ -183,6 +184,7 @@
             this.Name = "FrmBew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bewerken van deelnemer";
+            this.Load += new System.EventHandler(this.FrmBew_Load);
             this.grbBetaald.ResumeLayout(false);
             this.grbBetaald.PerformLayout();
             this.ResumeLayout(false);

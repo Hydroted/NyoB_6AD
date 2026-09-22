@@ -14,9 +14,9 @@ namespace NyoB_Lopen
         //Project Lopen
 
         //Velden + Properties
-        String _naam { get; set; } = "";
-        int _afstand { get; set; } = 0;
-        bool _betaald { get; set; } = false;
+        public String _naam { get; set; } = "";
+        public int _afstand { get; set; } = 0;
+        public bool _betaald { get; set; } = false;
 
         //Functies
         //Neemt alle gegevens en zet deze om naar een tekst
