@@ -80,6 +80,7 @@
             this.btnAanp.TabIndex = 12;
             this.btnAanp.Text = "Aanpassen";
             this.btnAanp.UseVisualStyleBackColor = true;
+            this.btnAanp.Click += new System.EventHandler(this.btnAanp_Click);
             // 
             // grbBetaald
             // 
@@ -162,6 +163,7 @@
             this.btnVerw.TabIndex = 18;
             this.btnVerw.Text = "Verwijderen";
             this.btnVerw.UseVisualStyleBackColor = true;
+            this.btnVerw.Click += new System.EventHandler(this.btnVerw_Click);
             // 
             // FrmBew
             // 

@@ -46,6 +46,7 @@
             this.btnEen.TabIndex = 21;
             this.btnEen.Text = "1 deelnemer";
             this.btnEen.UseVisualStyleBackColor = true;
+            this.btnEen.Click += new System.EventHandler(this.btnEen_Click);
             // 
             // btnAn
             // 
@@ -65,6 +66,7 @@
             this.btnAlle.TabIndex = 19;
             this.btnAlle.Text = "Alle deelnemers";
             this.btnAlle.UseVisualStyleBackColor = true;
+            this.btnAlle.Click += new System.EventHandler(this.btnAlle_Click);
             // 
             // cmbKies
             // 
@@ -129,10 +131,11 @@
             this.Controls.Add(this.btnAn);
             this.Controls.Add(this.btnAlle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmOpz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opzoeken deelnemer";
+            this.Load += new System.EventHandler(this.FrmOpz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

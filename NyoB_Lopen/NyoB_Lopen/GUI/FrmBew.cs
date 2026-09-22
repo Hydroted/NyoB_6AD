@@ -75,5 +75,86 @@ namespace NyoB_Lopen
                 rbNietbetaald.Checked = false;
             }
         }
+
+        private void btnAanp_Click(object sender, EventArgs e)
+        {
+            //kijken of alles werd ingevuld
+            if (cmbKies.SelectedIndex != -1 && txtNaam.Text != "" && cmbAfst.SelectedIndex != -1)
+            {
+                //Sla alle ontvangen gegevens op in een variabele
+                int ontvInd = cmbKies.SelectedIndex;
+                String ontvNm = txtNaam.Text;
+                int ontvAfst = 0;
+                if (cmbAfst.SelectedIndex == 0)
+                {
+                    ontvAfst = 5;
+                }
+                else if (cmbAfst.SelectedIndex == 1)
+                {
+                    ontvAfst = 10;
+                }
+                else if (cmbAfst.SelectedIndex == 2)
+                {
+                    ontvAfst = 20;
+                }
+
+                bool ontvBet = false;
+                if (rbBetaald.Checked)
+                {
+                    ontvBet = true;
+                }
+
+                //Stuur door naar de business om aan te passen
+                Program.Aanpassen(ontvInd, ontvNm, ontvAfst, ontvBet);
+
+                //Bevestig bij gebruiker
+                MessageBox.Show("Deze persoon is ingeschreven.", "Succes!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Reset form
+                cmbKies.SelectedIndex = -1;
+                cmbKies.Text = "";
+                txtNaam.Text = "";
+                cmbAfst.SelectedIndex = -1;
+                cmbAfst.Text = "";
+                rbNietbetaald.Checked = true;
+                VulCmb();
+            }
+
+            else
+            {
+                //Toon foutmelding
+                MessageBox.Show("U heeft niet alles ingevuld!", "Fout!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnVerw_Click(object sender, EventArgs e)
+        {
+            //kijken of alles werd ingevuld
+            if(cmbKies.SelectedIndex != -1)
+            {
+                //sla ontvangen gegevens op in een variabele
+                int ontvInd = cmbKies.SelectedIndex;
+
+                //Geef gegevens door naar business
+                Program.Verwijderen(ontvInd);
+
+                //Bevestig bij gebruiker
+                MessageBox.Show("Deze persoon is verwijderd.", "Succes!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Reset form
+                cmbKies.SelectedIndex = -1;
+                cmbKies.Text = "";
+                txtNaam.Text = "";
+                cmbAfst.SelectedIndex = -1;
+                cmbAfst.Text = "";
+                rbNietbetaald.Checked = true;
+                VulCmb();
+            }
+            else
+            {
+                //Toon foutmelding
+                MessageBox.Show("U heeft niet alles ingevuld!", "Fout!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
