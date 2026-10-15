@@ -50,6 +50,8 @@ namespace NyoB_Lopen
         /// <param name="versie"></param>
         void PasUitzichtAan(int versie)
         {
+            //Reset de textbox waarin de gegevens worden getoond
+            txtToon.Text = "";
             if(versie == 1)
             {
                 lblKies.Visible = false;
@@ -59,7 +61,7 @@ namespace NyoB_Lopen
                 txtToon.Location = new Point(12, 134);
                 Size = new Size(681, 538);
             }
-            else
+            else //1 deelnemer
             {
                 lblKies.Visible = true;
                 cmbKies.Visible = true;
@@ -72,12 +74,27 @@ namespace NyoB_Lopen
 
         private void btnAlle_Click(object sender, EventArgs e)
         {
+            //heb ik alle gegevens?
+            //zijn dit de juiste gegevens?
+            //functie oproepen
+            //gebruiker begeleiden
+            //form leegmaken als nodig is
             PasUitzichtAan(1);
+
+            //Haal gegevens uit business
+            txtToon.Text = Program.AlleGegevens();
         }
 
         private void btnEen_Click(object sender, EventArgs e)
         {
             PasUitzichtAan(2);
+
+        }
+
+        private void cmbKies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Toon gegevens van juiste persoon
+            txtToon.Text = Program.Geg1Deeln(cmbKies.SelectedIndex);
         }
     }
 }

@@ -27,11 +27,11 @@ namespace NyoB_Lopen
             antwoord = $"Deelnemer: {_naam}, loopt {_afstand}km, ";
             if(_betaald)
             {
-                antwoord += $"en heeft betaald";
+                antwoord += $"en heeft betaald {Environment.NewLine}";
             }
             else
             {
-                antwoord += $"en heeft niet betaald";
+                antwoord += $"en heeft niet betaald {Environment.NewLine}";
             }
 
             return antwoord;

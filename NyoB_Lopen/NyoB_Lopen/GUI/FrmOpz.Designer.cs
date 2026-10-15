@@ -79,6 +79,7 @@
             this.cmbKies.Name = "cmbKies";
             this.cmbKies.Size = new System.Drawing.Size(396, 40);
             this.cmbKies.TabIndex = 23;
+            this.cmbKies.SelectedIndexChanged += new System.EventHandler(this.cmbKies_SelectedIndexChanged);
             // 
             // lblKies
             // 

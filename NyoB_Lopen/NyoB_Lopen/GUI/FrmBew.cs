@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -48,31 +49,36 @@ namespace NyoB_Lopen
             //Sla de geselecteerde index op
             int index = cmbKies.SelectedIndex;
 
-            //Haal de deelnemer op die bij deze index hoort
-            Deelnemer ontvDeelnemer = Program.GegDeelnemer(index);
+            //Kijken of er een deelnemer geselecteerd is of
+            //het de reset is van de form
+            if (index != -1)
+            {
+                //Haal de deelnemer op die bij deze index hoort
+                Deelnemer ontvDeelnemer = Program.GegDeelnemer(index);
 
-            //vul de gegevens in
-            txtNaam.Text = ontvDeelnemer._naam;
-            if(ontvDeelnemer._afstand == 5)
-            {
-                cmbAfst.SelectedIndex = 0;
-            }
-            else if (ontvDeelnemer._afstand == 10)
-            {
-                cmbAfst.SelectedIndex = 1;
-            }
-            if (ontvDeelnemer._afstand == 20)
-            {
-                cmbAfst.SelectedIndex = 2;
-            }
-            
-            if(ontvDeelnemer._betaald)
-            {
-                rbBetaald.Checked = true;
-            }
-            else
-            {
-                rbNietbetaald.Checked = false;
+                //vul de gegevens in
+                txtNaam.Text = ontvDeelnemer._naam;
+                if (ontvDeelnemer._afstand == 5)
+                {
+                    cmbAfst.SelectedIndex = 0;
+                }
+                else if (ontvDeelnemer._afstand == 10)
+                {
+                    cmbAfst.SelectedIndex = 1;
+                }
+                if (ontvDeelnemer._afstand == 20)
+                {
+                    cmbAfst.SelectedIndex = 2;
+                }
+
+                if (ontvDeelnemer._betaald)
+                {
+                    rbBetaald.Checked = true;
+                }
+                else
+                {
+                    rbNietbetaald.Checked = true;
+                }
             }
         }
 
