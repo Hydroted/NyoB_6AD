@@ -16,5 +16,10 @@ namespace NyoB_Wijnen
         {
             InitializeComponent();
         }
+
+        private void btnAnn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
